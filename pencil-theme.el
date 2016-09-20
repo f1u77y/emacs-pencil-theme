@@ -56,7 +56,7 @@
       (yellow          "#f3e430")
       (dark-yellow     "#a89c14"))
 
-  (let 
+  (let
       ((bg              (if pencil/dark black         white        ))
        (bg-subtle       (if pencil/dark light-black   light-gray   ))
        (bg-very-subtle  (if pencil/dark subtle-black  lighter-gray ))
@@ -65,7 +65,7 @@
        (purple          (if pencil/dark light-purple  dark-purple  ))
        (cyan            (if pencil/dark light-cyan    dark-cyan    ))
        (green           (if pencil/dark light-green   dark-green   ))
-       (red             (if pencil/dark light-read    dark-red     ))
+       (red             (if pencil/dark light-red     dark-red     ))
        (bg-region       (if pencil/dark lighter-black light-blue   ))
        (bg-highlight    (if pencil/dark light-black   light-cyan   )))
     (let
@@ -77,11 +77,11 @@
 	 (type-face       `((t (:foreground ,purple))))
 	 (special-face    `((t (:foreground ,pink))))
 	 (error-face      `((t (:foreground ,red :weight bold)))))
-      
+
       (custom-theme-set-faces
        'pencil
-       
-       
+
+
        ;; Built-in stuff (Emacs 23)
        `(border ((t (:background ,bg-very-subtle))))
        `(cursor ((t (:background ,blue :foreground ,norm))))
@@ -94,23 +94,23 @@
 
        ;; linum-mode
        `(linum ((t (:foreground ,bg-subtle :background ,bg))))
-       
+
        ;; Mode line
        `(mode-line ((t (:background ,bg-subtle :box nil))))
        `(mode-line-buffer-id ((t (:foreground ,norm))))
        `(mode-line-emphasis ((t (:foreground ,norm :slant italic))))
        `(mode-line-highlight ((t (:foreground ,norm :background ,green :box nil))))
        `(mode-line-inactive ((t (:foreground ,bg-very-subtle :box nil))))
-       
-       
+
+
        `(region ((t (:background ,bg-region))))
        `(secondary-selection ((t (:background ,bg-region))))
        `(error ((t (:foreground ,red :weight bold))))
        `(warning ((t (:foreground ,light-red :weight bold))))
        `(success ((t (:foreground ,green :weight bold))))
-       
+
        `(header-line ((t (:inherit mode-line :background nil))))
-       
+
        ;; Font-lock stuff
        `(font-lock-builtin-face              ,constant-face)
        `(font-lock-comment-delimiter-face    ,comment-face)
@@ -129,15 +129,15 @@
        `(font-lock-variable-name-face        ,identifier-face)
        `(font-lock-warning-face              ,error-face)
 
-       
+
        ;; Search
        `(match ((t (:background ,bg-very-subtle : :inverse-video t))))
        `(isearch ((t (:foreground ,yellow :background ,light-black :inverse-video t))))
        `(isearch-lazy-highlight-face ((t (:background ,bg-subtle :inverse-video t))))
        `(isearch-fail ((t (:color ,light-red :inverse-video t))))
-       
+
        ;; Popups
-       `(popup-face ((t (:foreground ,norm-subtle :background ,bg-very-subtle))))	
+       `(popup-face ((t (:foreground ,norm-subtle :background ,bg-very-subtle))))
        `(popup-isearch-match ((t (:foreground ,norm-subtle :background ,yellow))))
        `(popup-scroll-bar-background-face ((t (:background ,norm-subtle))))
        `(popup-scroll-bar-foreground-face ((t (:background ,bg-subtle))))
